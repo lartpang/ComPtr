@@ -2,32 +2,62 @@
 
 ComPtr: Towards Diverse Bi-source Dense Prediction Tasks via A Simple yet General Complementary Transformer
 
-> [!NOTE]  
-> The paper is still under review.
-> Considering that it may need to be further revised according to the reviewers' comments, the code cannot be stabilized at the moment.
-> So it will still take some time for the full code to be released.
+```bibtex
+@ARTICLE{ComPtr,
+    title={ComPtr: Towards Diverse Bi-source Dense Prediction Tasks via A Simple yet General Complementary Transformer}, 
+    author={Youwei Pang and Xiaoqi Zhao and Lihe Zhang and Huchuan Lu},
+    journal = {IEEE Transactions on Pattern Analysis and Machine Intelligence},
+    year    = {2025},
+    doi     = {10.1109/TPAMI.2025.3578494},
+}
+```
 
 ## Results
 
-### Remote Sensing Change Detection & RGB-T Crowd Counting
+**LEVIR-CD**
 
-<p align="center">
-    <img src="https://github.com/lartpang/ComPtr/assets/26847524/5229a969-0cc7-406a-9f0f-97074e7537c8" alt="rscd_rgbtcc" height="500">
-</p>
+| Methods  | Backbone       | F1 $\uparrow$ | IoU $\uparrow$ |
+| -------- | -------------- | ------------- | -------------- |
+| TTP      | SAM (ViT-L/16) | 92.10         | 85.60          |
+| ComPtr-T | Swin-T         | 92.62         | 86.25          |
+| ComPtr-B | Swin-B         | 92.70         | 86.39          |
 
-### RGB-D/T Salient Object Detection
+**SYSU-CD**
 
-| dataset                          | model                                                                                                                                                                                                        |
-| -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| DUTRGBD NJUD NLPR SIP STEREO1000 | [comptr-b](https://github.com/lartpang/ComPtr/releases/download/prediction-v0.1/comptr-b-rgbdsod.zip), [comptr-t](https://github.com/lartpang/ComPtr/releases/download/prediction-v0.1/comptr-t-rgbdsod.zip) |
-| VT821 VT1000 VT5000TE            | [comptr-b](https://github.com/lartpang/ComPtr/releases/download/prediction-v0.1/comptr-b-rgbtsod.zip), [comptr-t](https://github.com/lartpang/ComPtr/releases/download/prediction-v0.1/comptr-t-rgbtsod.zip) |
+| Methods    | Backbone | F1 $\uparrow$ | IoU $\uparrow$ |
+| ---------- | -------- | ------------- | -------------- |
+| TransY-Net | Swin-B   | 82.84         | 70.71          |
+| ComPtr-T   | Swin-T   | 83.43         | 71.57          |
+| ComPtr-B   | Swin-B   | 83.18         | 71.21          |
 
-<p align="center">
-    <img src="https://github.com/lartpang/ComPtr/assets/26847524/cd4152c9-062f-4757-8d0a-8f436bd9e48b" alt="sod" height="500">
-</p>
+**RGB-T CC**
 
-### RGB-D Semantic Segmentation
+| Methods  | Backbone | GAME $_{0}\downarrow$ | RMSE $\downarrow$ |
+| -------- | -------- | --------------------- | ----------------- |
+| MMCC     | PvTv2-B3 | 10.90                 | 18.79             |
+| ComPtr-T | Swin-T   | 10.52                 | 18.48             |
+| ComPtr-B | Swin-B   | 11.82                 | 20.75             |
 
-<p align="center">
-    <img src="https://github.com/lartpang/ComPtr/assets/26847524/e511c6a8-3773-4364-9dea-19f893fe8a8b" alt="rgbdss" height="300">
-</p>
+**SUN-RGBD**
+
+| Methods   | Backbone  | mIoU $\uparrow$ |
+| --------- | --------- | --------------- |
+| DFormer-L | DFormer-L | 52.5            |
+| ComPtr-T  | Swin-T    | 48.9            |
+| ComPtr-B  | Swin-B    | 52.8            |
+
+**RGB-D/T SOD**
+
+(S $\_m$ & F $^{\omega}\_{\beta}$)
+
+| Methods    | Backbone   | DUTLF-Depth $\uparrow$ | NJUD $\uparrow$ | NLPR $\uparrow$ | SIP $\uparrow$ | STEREO1000 $\uparrow$ | Predictions                                                                                                   |
+| ---------- | ---------- | ---------------------- | --------------- | --------------- | -------------- | --------------------- | ------------------------------------------------------------------------------------------------------------- |
+| HRTransNet | HRFormer-B | 95.07 & 94.93          | 93.33 & 92.00   | 94.18 & 91.70   | 90.90 & 89.56  | 92.12 & 89.37         |                                                                                                               |
+| ComPtr-T   | Swin-T     | 94.37 & 92.17          | 92.89 & 89.48   | 93.56 & 88.66   | 91.34 & 87.96  | 91.99 & 87.45         | [comptr-t-rgbdsod](https://github.com/lartpang/ComPtr/releases/download/prediction-v0.1/comptr-t-rgbdsod.zip) |
+| ComPtr-B   | Swin-B     | 95.87 & 95.14          | 93.96 & 91.95   | 94.29 & 90.73   | 91.53 & 89.48  | 93.29 & 90.29         | [comptr-b-rgbdsod](https://github.com/lartpang/ComPtr/releases/download/prediction-v0.1/comptr-b-rgbdsod.zip) |
+
+| Methods    | Backbone   | VT821 $\uparrow$ | VT1000 $\uparrow$ | VT5000 $\uparrow$ | Predictions                                                                                                   |
+| ---------- | ---------- | ---------------- | ----------------- | ----------------- | ------------------------------------------------------------------------------------------------------------- |
+| HRTransNet | HRFormer-B | 90.59 & 84.92    | 93.79 & 91.27     | 91.23 & 86.99     |                                                                                                               |
+| ComPtr-T   | Swin-T     | 90.52 & 83.32    | 94.17 & 89.82     | 90.71 & 83.10     | [comptr-t-rgbtsod](https://github.com/lartpang/ComPtr/releases/download/prediction-v0.1/comptr-t-rgbtsod.zip) |
+| ComPtr-B   | Swin-B     | 92.37 & 87.48    | 95.12 & 92.66     | 92.84 & 88.34     | [comptr-b-rgbtsod](https://github.com/lartpang/ComPtr/releases/download/prediction-v0.1/comptr-b-rgbtsod.zip) |
