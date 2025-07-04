@@ -48,16 +48,18 @@ ComPtr: Towards Diverse Bi-source Dense Prediction Tasks via A Simple yet Genera
 
 **RGB-D/T SOD**
 
+See [Releases](https://github.com/lartpang/ComPtr/releases/tag/assets-v1.0)
+
 (S $\_m$ & F $^{\omega}\_{\beta}$)
 
-| Methods    | Backbone   | DUTLF-Depth $\uparrow$ | NJUD $\uparrow$ | NLPR $\uparrow$ | SIP $\uparrow$ | STEREO1000 $\uparrow$ | Predictions                                                                                                   |
-| ---------- | ---------- | ---------------------- | --------------- | --------------- | -------------- | --------------------- | ------------------------------------------------------------------------------------------------------------- |
+| Methods    | Backbone   | DUTLF-Depth $\uparrow$ | NJUD $\uparrow$ | NLPR $\uparrow$ | SIP $\uparrow$ | STEREO1000 $\uparrow$ |
+| ---------- | ---------- | ---------------------- | --------------- | --------------- | -------------- | --------------------- |
 | HRTransNet | HRFormer-B | 95.07 & 94.93          | 93.33 & 92.00   | 94.18 & 91.70   | 90.90 & 89.56  | 92.12 & 89.37         |                                                                                                               |
-| ComPtr-T   | Swin-T     | 94.37 & 92.17          | 92.89 & 89.48   | 93.56 & 88.66   | 91.34 & 87.96  | 91.99 & 87.45         | [comptr-t-rgbdsod](https://github.com/lartpang/ComPtr/releases/download/prediction-v0.1/comptr-t-rgbdsod.zip) |
-| ComPtr-B   | Swin-B     | 95.87 & 95.14          | 93.96 & 91.95   | 94.29 & 90.73   | 91.53 & 89.48  | 93.29 & 90.29         | [comptr-b-rgbdsod](https://github.com/lartpang/ComPtr/releases/download/prediction-v0.1/comptr-b-rgbdsod.zip) |
+| ComPtr-T   | Swin-T     | 94.37 & 92.17          | 92.89 & 89.48   | 93.56 & 88.66   | 91.34 & 87.96  | 91.99 & 87.45         |
+| ComPtr-B   | Swin-B     | 95.87 & 95.14          | 93.96 & 91.95   | 94.29 & 90.73   | 91.53 & 89.48  | 93.29 & 90.29         |
 
-| Methods    | Backbone   | VT821 $\uparrow$ | VT1000 $\uparrow$ | VT5000 $\uparrow$ | Predictions                                                                                                   |
-| ---------- | ---------- | ---------------- | ----------------- | ----------------- | ------------------------------------------------------------------------------------------------------------- |
-| HRTransNet | HRFormer-B | 90.59 & 84.92    | 93.79 & 91.27     | 91.23 & 86.99     |                                                                                                               |
-| ComPtr-T   | Swin-T     | 90.52 & 83.32    | 94.17 & 89.82     | 90.71 & 83.10     | [comptr-t-rgbtsod](https://github.com/lartpang/ComPtr/releases/download/prediction-v0.1/comptr-t-rgbtsod.zip) |
-| ComPtr-B   | Swin-B     | 92.37 & 87.48    | 95.12 & 92.66     | 92.84 & 88.34     | [comptr-b-rgbtsod](https://github.com/lartpang/ComPtr/releases/download/prediction-v0.1/comptr-b-rgbtsod.zip) |
+| Methods    | Backbone   | VT821 $\uparrow$ | VT1000 $\uparrow$ | VT5000 $\uparrow$ |
+| ---------- | ---------- | ---------------- | ----------------- | ----------------- |
+| HRTransNet | HRFormer-B | 90.59 & 84.92    | 93.79 & 91.27     | 91.23 & 86.99     |
+| ComPtr-T   | Swin-T     | 90.52 & 83.32    | 94.17 & 89.82     | 90.71 & 83.10     |
+| ComPtr-B   | Swin-B     | 92.37 & 87.48    | 95.12 & 92.66     | 92.84 & 88.34     |
