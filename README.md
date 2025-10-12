@@ -16,6 +16,8 @@ ComPtr: Towards Diverse Bi-source Dense Prediction Tasks via A Simple yet Genera
 
 **LEVIR-CD**
 
+> Based on [CAVER](https://github.com/lartpang/CAVER).
+
 | Methods  | Backbone       | F1 $\uparrow$ | IoU $\uparrow$ |
 | -------- | -------------- | ------------- | -------------- |
 | TTP      | SAM (ViT-L/16) | 92.10         | 85.60          |
@@ -23,6 +25,8 @@ ComPtr: Towards Diverse Bi-source Dense Prediction Tasks via A Simple yet Genera
 | ComPtr-B | Swin-B         | 92.70         | 86.39          |
 
 **SYSU-CD**
+
+> Based on [CAVER](https://github.com/lartpang/CAVER).
 
 | Methods    | Backbone | F1 $\uparrow$ | IoU $\uparrow$ |
 | ---------- | -------- | ------------- | -------------- |
@@ -51,6 +55,8 @@ ComPtr: Towards Diverse Bi-source Dense Prediction Tasks via A Simple yet Genera
 | ComPtr-B  | Swin-B    | 52.8            |
 
 **RGB-D/T SOD**
+
+> Based on [CAVER](https://github.com/lartpang/CAVER).
 
 See [Releases](https://github.com/lartpang/ComPtr/releases/tag/assets-v1.0)
 
