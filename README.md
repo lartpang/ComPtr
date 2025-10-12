@@ -4,7 +4,7 @@ ComPtr: Towards Diverse Bi-source Dense Prediction Tasks via A Simple yet Genera
 
 ```bibtex
 @ARTICLE{ComPtr,
-    title={ComPtr: Towards Diverse Bi-source Dense Prediction Tasks via A Simple yet General Complementary Transformer}, 
+    title={ComPtr: Towards Diverse Bi-source Dense Prediction Tasks via A Simple yet General Complementary Transformer},
     author={Youwei Pang and Xiaoqi Zhao and Lihe Zhang and Huchuan Lu},
     journal = {IEEE Transactions on Pattern Analysis and Machine Intelligence},
     year    = {2025},
@@ -32,6 +32,8 @@ ComPtr: Towards Diverse Bi-source Dense Prediction Tasks via A Simple yet Genera
 
 **RGB-T CC**
 
+> Based on [MMCC](https://github.com/liuzywen/RGBTCC).
+
 | Methods  | Backbone | GAME $_{0}\downarrow$ | RMSE $\downarrow$ |
 | -------- | -------- | --------------------- | ----------------- |
 | MMCC     | PvTv2-B3 | 10.90                 | 18.79             |
@@ -39,6 +41,8 @@ ComPtr: Towards Diverse Bi-source Dense Prediction Tasks via A Simple yet Genera
 | ComPtr-B | Swin-B   | 11.82                 | 20.75             |
 
 **SUN-RGBD**
+
+> Based on [CMX](https://github.com/huaaaliu/RGBX_Semantic_Segmentation).
 
 | Methods   | Backbone  | mIoU $\uparrow$ |
 | --------- | --------- | --------------- |
@@ -54,7 +58,7 @@ See [Releases](https://github.com/lartpang/ComPtr/releases/tag/assets-v1.0)
 
 | Methods    | Backbone   | DUTLF-Depth $\uparrow$ | NJUD $\uparrow$ | NLPR $\uparrow$ | SIP $\uparrow$ | STEREO1000 $\uparrow$ |
 | ---------- | ---------- | ---------------------- | --------------- | --------------- | -------------- | --------------------- |
-| HRTransNet | HRFormer-B | 95.07 & 94.93          | 93.33 & 92.00   | 94.18 & 91.70   | 90.90 & 89.56  | 92.12 & 89.37         |                                                                                                               |
+| HRTransNet | HRFormer-B | 95.07 & 94.93          | 93.33 & 92.00   | 94.18 & 91.70   | 90.90 & 89.56  | 92.12 & 89.37         |  |
 | ComPtr-T   | Swin-T     | 94.37 & 92.17          | 92.89 & 89.48   | 93.56 & 88.66   | 91.34 & 87.96  | 91.99 & 87.45         |
 | ComPtr-B   | Swin-B     | 95.87 & 95.14          | 93.96 & 91.95   | 94.29 & 90.73   | 91.53 & 89.48  | 93.29 & 90.29         |
 
