@@ -225,7 +225,6 @@ class DifferenceAwareDecoder(nn.Module):
             nn.Linear(int(hid_dim * mlp_ratio), hid_dim, bias=bias),
         )
 
-        # self.channel_attn = DualChannel(in_dim=in_dim, out_dim=out_dim, num_heads=num_heads, bias=bias)
         self.merge_xy = FFN(2 * in_dim, out_dim=out_dim, bias=bias)
         self.merge_xyz = FFN(2 * out_dim, out_dim=out_dim, bias=bias)
 
